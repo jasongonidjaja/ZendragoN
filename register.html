@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="register.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script defer src="register.js"></script>
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <!-- NAVIGATION BAR -->
+    <nav>
+        <div class="navbar">
+            <div class="register-hide-wrapper">
+                <a href="register.html" class="register-hide"> REGISTER</a>
+            </div>
+            <div class="header">
+                <img src="Assets/logo.png" alt="zendragon-logo" class="logo">
+                <a href="register.html" class="register"> REGISTER</a>
+            </div>
+            <div class="navigation">
+                <ul>
+                    <li><a href="home.html">HOME</a></li>
+                    <li><a href="characters.html">CHARACTERS</a></li>
+                    <li><a href="dragonclass.html">DRAGON CLASS</a></li>
+                    <li><a href="isleOfBerk.html">ISLE OF BERK</a></li>
+                </ul>
+            </div>
+            <div class="three-lines">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+        <div class="dropdown-menu">
+            <li><a href="home.html">HOME</a></li>
+            <li><a href="characters.html">CHARACTERS</a></li>
+            <li><a href="dragonclass.html">DRAGON CLASS</a></li>
+            <li><a href="isleOfBerk.html">ISLE OF BERK</a></li>         
+        </div>
+    </nav>
+    
+    <div class="main-content">
+        <img src="Assets/logoslogan.png" alt="zendragon-logo" class="logo">
+        <form action="" class="form" id="register-form">
+            <h1>Register Now!</h1>
+            <div class="ones">
+                <h2>First Name</h2>
+                <input type="text" placeholder="Insert first name" id="first-name" class="input">
+                <p id="error-first-name"></p>
+            </div>
+
+            <div class="ones">
+                <h2>Last Name</h2>
+                <input type="text" placeholder="Insert last name" id="last-name" class="input">
+                <p id="error-last-name"></p>
+            </div>
+
+            <div class="ones">
+                <h2>Gender</h2>
+                <select name="" id="gender" class="input">
+                    <option value="select-gender" hidden>Select Gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+                <p id="error-gender"></p>
+            </div>
+
+            <div class="ones">
+                <h2>Address</h2>
+                <input type="text" placeholder="Insert address" id="address" class="input">
+                <p id="error-address"></p>
+            </div>
+
+            <div class="ones">
+                <h2>Email Address</h2>
+                <input type="text" placeholder="Insert email" id="email-address" class="input">
+                <p id="error-email"></p>
+            </div>
+            <div class="button-wrapper">
+                <button type="submit">Get Started</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="bottom-mountains">
+    
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <div class="ones logo">
+                <img src="Assets/logo.png" alt="logo ZendragoN">
+            </div>
+            <!-- <div class="vertical-line"></div> -->
+            <div class="follow-and-contact">
+                <div class="socialMedia ones">
+                    <h3>Follow us on</h3>
+                    <ul>
+                        <li class="sm1"><a href="https://www.instagram.com/zendragon_academy/"><i class="fa-brands fa-instagram"></i></a></li>
+                        <li class="sm2"><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                        <li class="sm3"><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+                        <li class="sm4"><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                        <li class="sm5"><a href="#"><i class="fa-brands fa-snapchat"></i></a></li>
+                    </ul>
+                </div>
+                <!-- <div class="vertical-line"></div> -->
+                <div class="ones">
+                    <h3>Contact us on</h3>
+                    <div class="locationPhoneEmail-wrapper">
+                        <div class="locationPhoneEmail">
+                            <div class="location">
+                                <i class="fa-solid fa-location-dot" style="color: #dfad5d;"></i>
+                                <p>Main Land, Center of Berk, Isle of Berk</p>
+                            </div>
+                            <div class="phone">
+                                <i class="fa-solid fa-phone" style="color: #dfad5d;"></i>
+                                <p>0812 1723 1932</p>
+                            </div>
+                            <div class="email">
+                                <i class="fa-solid fa-envelope" style="color: #dfad5d;"></i>
+                                <p>Email: zendragon_academy@gmail.com</p>
+                            </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>© Copyright 2024 ZendragoN Academy - All Rights Reserved</p>
+        </div>
+    </footer>
+</body>
+</html>

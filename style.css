@@ -1,0 +1,555 @@
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+Great+Primer:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+Great+Primer+SC&display=swap');
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.shadow{
+    box-shadow: 0 0 35px 50px #1b1622;
+}
+
+body {
+    font-family: "IM Fell Great Primer", serif;
+    color: #f0c074;
+    background-color: #1b1622;
+    background-image: url(Assets/stars.png);
+    background-size: contain;
+    background-position: bottom;
+}
+
+.bottom-mountains {
+    height: 200px;
+    background-image: url(Assets/bottom-mountains.png);
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+}
+
+/* NAVBAR */
+
+/* nav {
+    font-family: "IM Fell Great Primer SC", serif;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #382f47;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+} */
+
+nav{
+    position: fixed;
+    width: 100%;
+    z-index: 777;
+}
+
+nav .navbar{
+    font-family: "IM Fell Great Primer SC", serif;
+    display: flex;
+    flex-direction: column;
+    background-color: #382f47;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+nav .header {
+    height: 100px;
+    width: 100%;
+    /* position: relative; sebagai parent harus relative */
+    background-color: #292235;
+    display: flex;
+    justify-content: center; /*harus bareng display flex, tengah sb-x*/
+    align-items: center; /*harus bareng display flex, tengah sb-y*/
+}
+
+nav .logo {
+    height: 70px;
+    position: absolute; /*absolute mengikuti parent, bisa diatur left right top bottom*/
+}
+
+nav .register {
+    position: absolute; /*absolute mengikuti parent, bisa diatur left right top bottom*/
+    right: 70px;
+    font-weight: bolder;
+    font-size: large;
+    border-style: solid;
+    border-width: 1px;
+    padding: 7px;
+    border-radius: 5px;
+    border-color: #292235;
+    background-color: #4e4955;
+    color: #c0c0c0;
+    transition: 0.2s ease;
+}
+
+nav .register:hover {
+    border-color: #c0c0c0;
+}
+
+nav .navigation {
+    background-color: #382f47;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav .navigation ul {
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    font-size: 18px;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #f0c074;
+    transition: 0.3s ease;
+}
+
+nav .navigation a:hover {
+    color: #ffe9c5;
+}
+
+nav .register-hide-wrapper{
+    display: none;
+    text-align: center;
+}
+
+nav .register-hide{
+    font-weight: bolder;
+    font-size: medium;
+    border-style: solid;
+    border-width: 1px;
+    padding: 3px;
+    border-radius: 5px;
+    border-color: #292235;
+    background-color: #4e4955;
+    color: #c0c0c0;
+    transition: 0.2s ease;
+    font-size: 1rem;
+    padding: 5px;
+}
+
+nav .register-hide:hover {
+    border-color: #c0c0c0;
+}
+
+nav .three-lines{
+    display: none;
+    font-size: 1.5rem;
+    text-align: center;
+    /* width: 100%; */
+}
+
+nav .nyala {
+    color: #ffe9c5;
+    text-shadow: 0 0 3px #fff;
+}
+
+/* DROPDOWN MENU */
+.dropdown-menu{
+    /* padding: 0px 10px; */
+    width: 100%;
+    display: none;
+    position: absolute;
+    list-style: none;
+    /* left: 1rem; */
+    /* border-radius: 10px; */
+    /* width: 500px; */
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    overflow: hidden;
+    height: 0; /*hide dulu*/
+    transition: height 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+.dropdown-menu.open{
+    height: 200px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.dropdown-menu li {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.dropdown-menu a {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropdown-menu a:hover {
+    color: #ffe9c5;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+/* .dropdown-menu li{
+    padding: 10px;
+} */
+
+/* RESPONSIVE NAVBAR */
+
+@media (max-width: 700px){
+    nav .navbar{
+        flex-direction: row-reverse;
+        justify-content: center;
+        align-items: center;
+        background-color: #292235;
+        gap: 100px;
+    }
+    nav .header{
+        width: 100%;
+    }
+    nav .logo {
+        height: 50px;
+    }
+    nav .register{
+        display: none;
+    }
+    nav .register-hide-wrapper{
+        display: block;
+        width: 100%;
+    }
+
+    nav .three-lines{
+        display: block;
+        width: 100%;
+    }
+
+    nav .navigation{
+        display: none;
+    }
+
+    .dropdown-menu{
+        display: block;
+    }
+    .dropdown-menu.open{
+        display: flex;
+    }
+}
+
+@media (max-width: 520px){
+    nav .navbar{
+        gap: 20px;
+    }
+    nav .logo{
+        height: 40px;
+    }
+    nav .register-hide{
+        font-weight: bold;
+        font-size: small;
+        padding: 5px;
+    }
+    nav .three-lines{
+        font-size: 1.3rem;
+    }
+}
+
+/* FOOTER */
+footer{
+    background-color: #000000;
+    text-align: center;
+    padding-top: 50px;
+}
+
+footer .footer-content{
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+}
+
+footer .ones{
+    width: 100%;
+    padding: 10px 0px;
+}
+
+.follow-and-contact{
+    display: flex;
+    flex-direction: row;
+    width: 66.67%;
+}
+
+footer .logo {
+    width: 33.33%;
+}
+
+footer img{
+    padding-top: 30px;
+    width: 320px;
+}
+
+.socialMedia ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.socialMedia ul li{
+    list-style: none;
+    text-decoration: none;
+}
+
+.socialMedia ul li a{
+    list-style: none;
+    text-decoration: none;
+}
+
+.socialMedia ul li .fa-brands{
+    font-size: 20px;
+    /* line-height: 60px; */
+    transition: .3s;
+    color: #000;
+}
+
+.socialMedia ul li .fa-brands:hover{
+    color: #fff;
+}
+
+.socialMedia ul li .fa-snapchat:hover{
+    color: #000000;
+}
+
+.socialMedia ul li a{
+    position: relative;
+    bottom: 0;
+    display: flex;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #dfad5d;
+    align-items: center;
+    justify-content: center;
+    transition: .3s;
+    box-shadow: 0 5px 4px rgba(0, 0, 0, 0.5);
+
+}
+
+.socialMedia ul li a:hover {
+    transform: translate(0px, -5px);
+}
+.socialMedia ul .sm1 a:hover {
+    background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d, #f56040, #f77737, #fcaf45, #ffdc80);
+}
+.socialMedia ul .sm2 a:hover {
+    background-color: #1877F2;
+}
+.socialMedia ul .sm3 a:hover {
+    background-color: #FF0000;
+}
+.socialMedia ul .sm4 a:hover {
+    background-color: #1DA1F2;
+}
+.socialMedia ul .sm5 a:hover {
+    background-color: #FFFC00;
+}
+
+footer .copyright{
+    padding: 20px 10px 30px 10px;
+    /* font-size: 1rem; */
+}    
+
+footer .vertical-line{
+    width: 1px;
+    height: 250px;
+    background-color: #c0c0c0;
+}
+
+/* FOOTER RIGHT MOST */
+
+.locationPhoneEmail-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.locationPhoneEmail{
+    padding-top: 20px;
+    /* padding-top: 20px; */
+    display: flex;
+    flex-direction: column;
+    /* padding-left: 50px; */
+    gap: 10px;
+    /* justify-content: center; */
+}
+
+.location, .phone, .email{
+    display: flex;
+    justify-content: start;
+    gap: 20px;
+}
+
+@media (max-width: 1180px) {
+    footer img {
+        width: 280px; /* Adjust image width */
+    }
+}
+
+@media (max-width: 930px){
+    
+    footer .footer-content {
+        flex-direction: column;
+        justify-content: center;
+    }
+    footer .ones {
+        width: 100%;
+    }
+    footer .follow-and-contact {
+        width: 100%;
+    }
+    footer img {
+        padding-top: 0;
+    }
+}
+
+@media (max-width: 630px){
+    footer .follow-and-contact {
+        flex-direction: column;
+    }
+}
+
+
+
+
+.addLineBetween {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 2%;
+}
+
+.addLineBetween::before, .addLineBetween::after{
+    content: "";
+    width: 20%;
+    height: 40px;
+    /* background-color: #f0c074; */
+    background-image: url(Assets/add-line-between.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.addLineBetween::after {
+    /* margin-left: 2%; */
+    background-position: left;
+}
+
+.addLineBetween::before {
+    /* margin-right: 2%; */
+    background-position: right;
+    transform: scaleX(-1);
+}
+
+.addLineBetween .logo {
+    width: 75px;
+}
+
+
+
+/* PENDAHULUAN */
+
+#pendahuluan {
+    background-position: top;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100vh;
+    padding: 100px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#pendahuluan h1 {
+    font-family: "IM Fell Great Primer SC", serif;
+    font-size: 5rem;
+    letter-spacing: 1px;
+    /* background: linear-gradient(#f6daad, #dfad5d);
+    background-clip: text;
+    color: transparent; */
+}
+
+#pendahuluan p {
+    font-size: 1.5rem;
+    /* background: linear-gradient(#f6daad, #dfad5d);
+    background-clip: text;
+    color: transparent; */
+}
+
+#pendahuluan .pendahuluan {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 4px 4px 10px black;
+}
+
+
+
+/* JUDUL */
+
+.judul {
+    font-family: "IM Fell Great Primer SC", serif;
+    font-size: 2.5rem;
+}
+
+
+
+/* RESPONSIVES */
+
+@media (max-width: 820px){
+    #pendahuluan h1 {
+        font-size: 4rem;
+    }
+    #pendahuluan p {
+        font-size: 1.2rem;
+    }
+
+    .judul {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 700px){
+    #pendahuluan {
+        padding: 50px;
+    }
+    #pendahuluan h1 {
+        font-size: 3rem;
+    }
+    #pendahuluan p {
+        font-size: 1rem;
+    }
+
+    .judul {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 420px){
+    #pendahuluan {
+        padding: 25px;
+    }
+    #pendahuluan h1 {
+        font-size: 2.8rem;
+    }
+    #pendahuluan p {
+        font-size: 1rem;
+    }
+}

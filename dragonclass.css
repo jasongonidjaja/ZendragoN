@@ -1,0 +1,410 @@
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+Great+Primer:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+Great+Primer+SC&display=swap');
+
+* {
+    scroll-behavior: smooth;
+    scroll-padding: 150px;
+}
+
+@media (max-width: 700px){
+    * {
+        scroll-padding: 100px;
+    }
+}
+
+/* .dragon-class-btn {
+    position: fixed;
+    bottom: 4vh;
+    right: 4vw;
+    font-family: "IM Fell Great Primer SC", serif;
+    font-size: 1.2rem;
+    padding: 5px;
+    border-radius: 5px;
+    width: 150px;
+    background-color: #3d2c55;
+    color: #f0c074;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.dragon-class-btn:hover {
+    background-color: #797184;
+    color: white;
+} */
+
+#pendahuluan {
+    background-image: url(Assets/background-dragon.png);
+}
+
+
+
+
+#dragonclass {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+}
+
+#dragonclass .contents {
+    padding: 20px 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    gap: 10px;
+}
+
+#dragonclass a {
+    text-decoration: none;
+    color: #dfad5d;
+}
+
+#dragonclass .contents .box {
+    width: 100%;
+    background-color: #4e4955;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    border-style: outset;
+    border-radius: 20px;
+    border-color: #b29fcf;
+    border-width: 3px;
+}
+
+#dragonclass .contents .hover {
+    padding-top: 5px;
+    width: 100%;
+    transition: 0.2s ease;
+}
+
+#dragonclass .contents .hover:hover {
+    width: 100%;
+    padding-top: 0px;
+    padding-bottom: 5px;
+}
+
+#dragonclass .contents img {
+    width: 75%;
+}
+
+#dragonclass .contents h2 {
+    padding-bottom: 10px;
+    /* font-size: 1rem; */
+}
+
+#dragonclass .contents .firebringer {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(Assets/background-firebringer.jpg);
+    background-position: bottom;
+}
+
+#dragonclass .contents .frostwing {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(Assets/background-frostwing.png);
+    background-position: left top;
+}
+
+#dragonclass .contents .shadowspawn {
+    background-image: url(Assets/background-shadowspawn.jpg);
+    background-position: bottom;
+}
+
+#dragonclass .contents .stormcaller {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(Assets/background-stormcaller.png);
+    background-position: center;
+}
+
+#dragonclass .contents .healer {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(Assets/background-healer.png);
+    background-position: right center;
+}
+
+#dragonclass .contents .titan {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(Assets/background-titan.jpg);
+    background-position: right center;
+}
+
+#dragonclass .atas, #dragonclass .bawah {
+    width: 100%;
+    display: flex;
+    gap: 10px;
+}
+
+
+
+
+
+#dragons {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#dragons h1 {
+    padding: 10px 0px;
+    font-size: 2.2rem;
+}
+
+#dragons h2 {
+    padding: 15px 0px 10px 0px;
+    font-size: 1.7rem;
+    text-align: center;
+}
+
+#dragons p {
+    font-size: 1.2rem;
+}
+
+#dragons .contents {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+}
+
+#dragons .contents .content {
+    padding: 15px 8% 15px 8%;
+}
+
+#dragons .contents .content .description {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#dragons .contents .content .description .logo {
+    width: 100px;
+    padding-right: 20px;
+    padding-top: 10px;
+}
+
+#dragons .contents .content .tulisan {
+    padding: 0px 50px 50px 20px;
+    border-style: outset;
+    border-radius: 20px;
+    border-color: #b29fcf;
+    border-width: 3px;
+    background-color: rgba(71, 65, 81, 1);
+    box-shadow: 4px 4px 10px black;
+}
+
+#dragons .contents .content .gambar {
+    padding-left: 50px;
+}
+
+#dragons .contents .content .dragonss {
+    /* padding: 15px 0px; */
+    display: flex;
+    flex-direction: row;
+    /* gap: 20px; */
+}
+
+#dragons .contents .content .panah {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#dragons .contents .content .dragonss img {
+    width: 200px;
+    border-radius: 10px;
+}
+
+#dragons .contents .content .dragonss .one {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+#dragons .contents .content .dragonss .one h3 {
+    padding-top: 10px;
+}
+
+#dragons .contents .content h4 {
+    text-align: right;
+    font-size: 1.2rem;
+}
+
+#dragons a {
+    text-decoration: none;
+    color: #dfad5d;
+    transition: 0.3s ease;
+}
+
+#dragons a:hover {
+    color: #ffdda6;
+}
+
+.container-border {
+    padding: 10px;
+    /* border: 2px solid #474151; */
+    border-radius: 10px;
+    border-style: outset;
+    border-radius: 20px;
+    border-color: #b29fcf;
+    border-width: 3px;
+    background-color: #474151;
+    box-shadow: 4px 4px 10px black;
+}
+
+.container-slider{
+    /* z-index: -1; */
+    /* box-shadow: 0 0 30px 10px #474151; */
+    /* width: 100%;  */
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.slider{
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 200px;
+    /* background-color: aqua; */
+}
+
+.slide{
+    flex: 0 0 100%;
+    /* height: 250px; */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    /* align-items: flex-end; */
+    color: #f0c074;
+    font-size: 1rem;
+}
+
+.slider-controls button{
+    cursor: pointer;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: none;
+}
+
+.prev, .next{
+    z-index: 1;
+    margin: 0 10px;
+    background: #474151;
+    color: #f0c074;
+    font-family: "IM Fell Great Primer SC", serif;
+    font-weight: bolder;
+}
+
+.slide.active{
+    transform: translateX(0);
+}
+
+
+
+
+
+@media (max-width: 1150px){
+    #dragonclass h2 {
+        font-size: 1rem;
+    }
+    #dragonclass .contents {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    #dragons .contents .content {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    #dragons .contents .content .tulisan {
+        padding-bottom: 15px;
+    }
+    #dragons .contents .content .tulisan p {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 820px){
+    #dragonclass h2 {
+        font-size: 1.5rem;
+    }
+    #dragonclass .contents {
+        padding-left: 100px;
+        padding-right: 100px;
+        flex-direction: column;
+    }
+    #dragonclass .contents img {
+        width: 50%;
+    }
+
+    #dragons .contents .content {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    #dragons .contents .content .tulisan {
+        padding-right: 20px;
+    }
+    #dragons .contents .content .tulisan h1 {
+        font-size: 1.8rem;
+    }
+    #dragons .contents .content .tulisan p {
+        font-size: 1rem;
+    }
+    #dragons .contents .content .gambar {
+        padding-left: 20px;
+    }
+    #dragons .contents .content .gambar h2 {
+        font-size: 1.5rem;
+    }
+    #dragons .contents .content .gambar h3 {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 700px){
+    #dragonclass h2 {
+        font-size: 1rem;
+    }
+    #dragonclass .contents {
+        padding-left: 20px;
+        padding-right: 20px;
+        flex-direction: column;
+    }
+
+    #dragons .contents .content .description {
+        flex-direction: column;
+    }
+    #dragons .contents .content .gambar {
+        padding-left: 0px;
+    }
+    .prev, .next{
+        margin: 5px;
+    }
+    .slider-controls button{
+        cursor: pointer;
+        height: 35px;
+        width: 35px;
+        border-radius: 50%;
+        border: none;
+    }
+}
+
+@media (max-width: 420px){
+    #dragonclass .atas, #dragonclass .bawah {
+        flex-direction: column;
+    }
+    #dragonclass .contents {
+        padding-left: 100px;
+        padding-right: 100px;
+        flex-direction: column;
+    }
+
+    #dragons .contents .content {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
